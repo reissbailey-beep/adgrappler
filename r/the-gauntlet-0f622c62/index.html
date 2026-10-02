@@ -197,6 +197,11 @@ background:linear-gradient(180deg,rgba(10,10,10,.86) 0%,rgba(10,10,10,.68) 35%,r
 .credit{color:#fff;font-weight:600}
 .checklist li{list-style:none;position:relative;padding:.5rem 0 .5rem 2rem;border-bottom:1px solid var(--line);color:var(--body);font-size:.95rem}
 .checklist li::before{content:"";position:absolute;left:0;top:.75rem;width:1.1rem;height:1.1rem;border:2px solid var(--accent);border-radius:4px}
+/* enquiry assistant demo (chat bubble is the GHL widget, loaded before </body>) */
+.issue.try{border:2px solid var(--brand-primary)}
+.rank.try-tag{background:var(--brand-ink);color:#fff}
+.try-open{border:0;font-family:inherit;cursor:pointer;margin:1.1rem 0 .4rem}
+.try-open[hidden]{display:none}
 @media (max-width:560px){
 .est thead{display:none}
 .est tr{display:grid;grid-template-columns:1fr auto;column-gap:.8rem;border-bottom:1px solid var(--line);padding:.7rem .2rem}
@@ -340,6 +345,16 @@ background:linear-gradient(180deg,rgba(10,10,10,.86) 0%,rgba(10,10,10,.68) 35%,r
         <li>Save the three follow-up messages in Section 3 as quick replies in WhatsApp Business, so whoever is on reception can send them in seconds.</li>
       </ol>
       <p class="note">Wix sends booking texts from a generic Wix number and needs SMS credit on your plan. Your own WhatsApp is better for conversations; Wix SMS is fine for confirmations and reminders.</p>
+    </article>
+
+    <!-- TRY THE ASSISTANT (GHL Conversation AI "Gia" in the GHL chat widget; embed script is before </body>) -->
+    <article class="issue try" id="try-assistant">
+      <div class="issue-top"><span class="rank try-tag">Try it</span><span class="impact">Built for The Gauntlet</span><span class="time">Live demo</span></div>
+      <h3>Try your own enquiry assistant</h3>
+      <p>Meet Gia. She's in the chat bubble at the bottom right of this page. We trained her on your own website, timetable and prices, so ask her anything a new member or a parent would.</p>
+      <p>No sign-up needed. Just tap the bubble (or the button below) and start typing.</p>
+      <button type="button" class="btn try-open" hidden>Chat with Gia</button>
+      <p class="note">In this demo she won't book or text anyone (in a live setup she would, which fixes the "nobody gets a text" gap above). If she isn't sure of something, she'll say she'll check with the team rather than guess.</p>
     </article>
 
     <!-- ISSUE 4 -->
@@ -547,5 +562,18 @@ Trial class £7, right by Ealing Broadway station.</div>
     <p>Not affiliated with Wix, Meta or Google. Logo and photos are The Gauntlet Fight Academy's own, from their public website. This page is private and set to noindex.</p>
   </div>
 </footer>
+<script>
+/* "Chat with Gia" button: shown only once the GHL widget has loaded, then opens it.
+   Also hides GHL's "Hi there! Have a question?" pop-up on phones (it sits over the text and can't be switched off in GHL).
+   The widget uses an open shadow root, so we add one style rule inside it; if GHL changes its markup this does nothing. */
+(function(){var b=document.querySelector('.try-open'),n=0;
+function cw(){return window.leadConnector&&window.leadConnector.chatWidget;}
+function hidePrompt(){var h=document.querySelector('chat-widget'),r=h&&h.shadowRoot;if(!r||r.getElementById('ag-hide-prompt'))return;
+var st=document.createElement('style');st.id='ag-hide-prompt';st.textContent='@media (max-width:640px){.lc_text-widget--prompt{display:none!important}}';r.appendChild(st);}
+var t=setInterval(function(){var w=cw();hidePrompt();if(w&&w.isLoaded===true&&typeof w.openWidget==='function'){if(b)b.hidden=false;hidePrompt();setTimeout(hidePrompt,3000);clearInterval(t);}else if(++n>60){clearInterval(t);}},500);
+if(!b)return;
+b.addEventListener('click',function(){var w=cw();if(w&&typeof w.openWidget==='function')w.openWidget();});})();
+</script>
+<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6abfe583b9d1919abad96f6c"></script>
 </body>
 </html>
