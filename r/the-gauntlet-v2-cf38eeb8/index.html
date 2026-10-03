@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="googlebot" content="noindex, nofollow">
+<title>More trials for The Gauntlet Fight Academy | Prepared by Clide at Ad Grappler</title>
+<meta name="description" content="A private page for The Gauntlet Fight Academy, Ealing: more trial bookings on autopilot, with a live demo of Gia, your own AI assistant.">
+<link rel="icon" href="assets/logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800&display=swap">
+<link rel="preload" as="image" href="assets/hero.jpg">
+<style>
+/* =====================================================================
+   BRAND CONFIG: the only block to change for the next gym.
+   See /workspace/agency/audits/TEMPLATE-NOTES.md
+   Source for The Gauntlet: thegauntletfightacademy.com (Wix theme CSS + logo),
+   checked 2 Oct 2026. Logo/photos are the gym's own public images.
+   ===================================================================== */
+:root{
+  --gym-name:"The Gauntlet Fight Academy";
+  --brand-logo:url("assets/logo.png");        /* square, transparent PNG/SVG */
+  --brand-hero:url("assets/hero.jpg");        /* hero background photo */
+  --brand-photo-2:url("assets/photo-2.jpg");  /* closing section photo (optional: set to none) */
+  --hero-position:center 40%;                 /* which part of the hero photo to keep on phones */
+  --brand-primary:#2351DD;    /* main brand colour: buttons, links, numbers (needs >=4.5:1 on white) */
+  --brand-secondary:#071870;  /* deep shade: button hover, gradients */
+  --brand-accent:#1D67CD;     /* highlight: focus rings, small details */
+  --brand-ink:#0A0A0A;        /* dark sections (top bar, hero, close, footer) */
+  --brand-on-dark:#8FB0FF;    /* primary lightened for text on dark (needs >=4.5:1 on ink) */
+  --font-display:"Anton",Impact,"Arial Narrow Bold",sans-serif;
+  --font-body:"Barlow",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+/* ===================== end of brand config ===================== */
+
+/* Design tokens (light by default; .dark flips them) */
+:root{--bg:#ffffff;--bg-2:#f3f5f9;--bg-3:#e8ecf3;--card:#ffffff;--line:#dde2ea;--text:#0b0c0f;--body:#2f333b;--muted:#5a606b;
+--accent:var(--brand-primary);--accent-2:var(--brand-accent);--ink:#ffffff;--ok:#127046;--bad:#c42b2b;--radius:14px;
+--tint:color-mix(in srgb,var(--brand-primary) 8%,transparent);--tint-2:color-mix(in srgb,var(--brand-primary) 16%,transparent);
+--font:var(--font-body);--display:var(--font-display)}
+.dark{--bg:var(--brand-ink);--bg-2:#15171c;--bg-3:#1e2129;--card:#15171c;--line:#2b2f38;--text:#ffffff;--body:#d9dce3;--muted:#a9aeb9;
+--accent:var(--brand-on-dark);--ink:var(--brand-ink);--ok:#3ecf8e;--bad:#ff6b6b;--tint:color-mix(in srgb,var(--brand-on-dark) 10%,transparent);
+background-color:var(--bg);color:var(--text)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);font-size:1.0625rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block;height:auto}
+a{color:var(--accent);text-underline-offset:.15em}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--brand-accent);outline-offset:3px;border-radius:6px}
+h1,h2,h3{line-height:1.1;margin:0 0 .6em}
+h1,h2{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.01em;text-wrap:balance}
+h1{font-size:clamp(2.3rem,10vw,4.2rem);line-height:1.02}
+h2{font-size:clamp(1.8rem,7vw,2.8rem);line-height:1.05}
+h3{font-size:1.2rem;font-weight:800}
+p{margin:0 0 1em}
+ul,ol{margin:0;padding:0}
+b,strong{color:var(--text)}
+.read{max-width:720px;margin:0 auto;padding:0 1.25rem}
+.kicker{font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.16em;color:var(--accent);margin:0 0 .8rem}
+.muted{color:var(--muted)}
+.small{font-size:.9rem}
+section{padding:3.2rem 0;border-top:1px solid var(--line)}
+
+/* top bar: small Ad Grappler credit */
+.topbar{background:var(--brand-ink);color:#c9cdd6;text-align:center;font-size:.74rem;font-weight:500;line-height:1.4;padding:.5rem 1rem;border-bottom:3px solid var(--brand-primary);text-wrap:balance}
+.topbar b{color:#fff;font-weight:700}
+
+/* hero: gym logo + photo */
+.hero{position:relative;isolation:isolate;padding:1.6rem 0 2.8rem;border-top:0;
+background:radial-gradient(520px 320px at 85% 100%,color-mix(in srgb,var(--brand-primary) 32%,transparent),transparent 70%),var(--brand-ink)}
+.hero::before{content:"";position:absolute;inset:0 0 auto 0;height:clamp(470px,62vw,600px);z-index:-1;
+background:linear-gradient(180deg,rgba(10,10,10,.62) 0%,rgba(10,10,10,.12) 32%,rgba(10,10,10,.3) 62%,var(--brand-ink) 100%),var(--brand-hero) var(--hero-position)/cover no-repeat}
+.brand{display:flex;align-items:center;gap:.85rem;margin:0 0 13rem;text-decoration:none;color:#fff}
+.brand-logo{flex:none;width:76px;height:76px;background:var(--brand-logo) center/contain no-repeat;filter:drop-shadow(0 4px 14px rgba(0,0,0,.55))}
+.brand-name::before{content:var(--gym-name)}
+.brand-name{font-family:var(--display);text-transform:uppercase;letter-spacing:.06em;font-size:1.05rem;line-height:1.15;max-width:12ch;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.hero .for{display:inline-block;font-size:.8rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);border-bottom:2px solid var(--brand-primary);padding-bottom:.3rem;margin-bottom:1rem;text-shadow:0 1px 10px rgba(0,0,0,.8)}
+.hero h1{text-shadow:0 2px 18px rgba(0,0,0,.45)}
+.hero .sub{font-size:1.14rem;color:var(--body);text-shadow:0 1px 10px rgba(0,0,0,.6)}
+.meta-row{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1.3rem}
+.meta-row span{font-size:.8rem;font-weight:700;border:1px solid rgba(255,255,255,.18);background:rgba(10,10,10,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-radius:999px;padding:.32rem .75rem;color:var(--body)}
+.meta-row span.private{border-color:color-mix(in srgb,var(--brand-on-dark) 55%,transparent);color:#fff}
+.private-note{font-size:.84rem;color:var(--muted);margin:1rem 0 0}
+
+/* letter */
+.letter p{color:var(--body);font-size:1.06rem}
+.letter .sig,.close .sig,.sig{font-family:var(--font-body);font-weight:800;font-style:italic;font-size:1.9rem;color:var(--accent);margin:1rem 0 0;line-height:1.1}
+.letter .sig-role,.close .sig-role,.sig-role{font-size:.88rem;color:var(--muted);margin:0}
+.wins{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin:1.6rem 0 1.4rem}
+.wins li{list-style:none;background:var(--bg-2);border:1px solid var(--line);border-top:3px solid var(--brand-primary);border-radius:12px;padding:.85rem .8rem;font-size:.86rem;color:var(--muted);line-height:1.35}
+.wins li b{display:block;font-family:var(--display);font-weight:400;font-size:1.5rem;color:var(--accent);line-height:1.1;margin-bottom:.25rem}
+
+/* ads */
+.ad{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:1.3rem 1.2rem;margin-top:1.4rem;box-shadow:0 1px 2px rgba(10,20,60,.04),0 10px 28px rgba(10,20,60,.06)}
+.ad h3{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.01em;font-size:1.35rem}
+.mock{background:#fff;color:#1c1e21;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:1rem 0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.mock-h{display:flex;gap:.55rem;align-items:center;padding:.7rem .8rem .4rem}
+.mock-h i{width:2rem;height:2rem;border-radius:50%;background:var(--brand-logo) center/contain no-repeat,#111;display:block;flex:none}
+.mock-h b{color:#1c1e21;font-size:.86rem;display:block;line-height:1.2}
+.mock-h span{font-size:.72rem;color:#65676b}
+.mock-t{padding:.2rem .8rem .7rem;font-size:.88rem;line-height:1.45;white-space:pre-line}
+.mock-img{color:#f4f2ee;aspect-ratio:4/5;display:grid;place-items:center;align-content:center;text-align:center;padding:1.2rem;font-family:var(--display);text-transform:uppercase;font-size:1.45rem;line-height:1.15;letter-spacing:.01em;
+background:linear-gradient(180deg,rgba(10,10,10,.55),rgba(10,10,10,.8)),radial-gradient(260px 200px at 50% 40%,color-mix(in srgb,var(--brand-primary) 45%,transparent),transparent 70%),var(--brand-hero) center/cover no-repeat,#111}
+.mock-img.alt{background:linear-gradient(180deg,rgba(10,10,10,.5),rgba(10,10,10,.8)),var(--brand-photo-2) center/cover no-repeat,#111}
+.mock-img::before{content:"▶";display:grid;place-items:center;width:3.2rem;height:3.2rem;margin:0 auto .9rem;border-radius:50%;background:var(--brand-primary);color:#fff;font-size:1.1rem;font-family:system-ui,sans-serif}
+.mock-img small{display:block;font-family:var(--font);text-transform:none;font-size:.82rem;color:#d4d6db;margin-top:.6rem;font-weight:600;letter-spacing:0}
+.mock-f{display:flex;justify-content:space-between;align-items:center;gap:.6rem;padding:.65rem .8rem;background:#f0f2f5}
+.mock-f span{font-size:.7rem;color:#65676b;text-transform:uppercase;display:block}
+.mock-f b{font-size:.88rem;color:#1c1e21;line-height:1.25;display:block}
+.mock-f em{font-style:normal;background:#e4e6eb;color:#1c1e21;font-weight:700;font-size:.82rem;padding:.45rem .7rem;border-radius:6px;white-space:nowrap}
+/* close */
+.close{border-top:4px solid var(--brand-primary);
+background:linear-gradient(180deg,rgba(10,10,10,.86) 0%,rgba(10,10,10,.68) 35%,rgba(10,10,10,.92) 75%,var(--brand-ink) 100%),var(--brand-photo-2) center 30%/cover no-repeat,var(--brand-ink)}
+.close p{color:var(--body);font-size:1.06rem}
+.btn{display:flex;width:100%;align-items:center;justify-content:center;gap:.5rem;min-height:56px;padding:.9rem 1.2rem;border-radius:999px;background:var(--brand-primary);color:#fff;font-weight:800;font-size:1.05rem;letter-spacing:.01em;text-decoration:none;text-align:center;box-shadow:0 10px 30px color-mix(in srgb,var(--brand-primary) 40%,transparent);margin:1.4rem 0 .6rem;transition:background .15s}
+.btn:hover{background:var(--brand-secondary)}
+.btn::after{content:"→"}
+.foot{border-top:1px solid var(--line);padding:2.2rem 0 2.6rem;color:var(--muted);font-size:.84rem}
+.foot p{margin:0 0 .6rem}
+.foot .brand{margin:0 0 1.2rem}
+.close .brand{margin:0}
+.foot .brand-logo{width:48px;height:48px}
+.foot .brand-name{font-size:.9rem;max-width:none}
+.credit{color:#fff;font-weight:600}
+
+/* Gia card */
+#gia{background:var(--bg-2)}
+.gia{background:var(--card);border:2px solid var(--brand-primary);border-radius:20px;padding:1.4rem 1.2rem 1.2rem;box-shadow:0 10px 30px color-mix(in srgb,var(--brand-primary) 14%,transparent)}
+.gia-head{display:flex;align-items:center;gap:.8rem;margin-bottom:.9rem}
+.gia-av{flex:none;width:54px;height:54px;border-radius:50%;background:var(--brand-logo) center/78% no-repeat,var(--brand-ink);position:relative}
+.gia-av::after{content:"";position:absolute;right:1px;bottom:2px;width:13px;height:13px;border-radius:50%;background:#22c55e;border:2px solid var(--card)}
+.gia-head b{display:block;font-size:1.1rem;line-height:1.2}
+.gia-head span{font-size:.85rem;color:var(--ok);font-weight:700}
+.gia p{color:var(--body)}
+.asks{display:flex;flex-wrap:wrap;gap:.4rem;margin:.2rem 0 .4rem}
+.asks span{font-size:.86rem;background:var(--tint);border:1px solid var(--tint-2);color:var(--text);border-radius:14px 14px 14px 4px;padding:.35rem .7rem}
+.btn.big{min-height:62px;font-size:1.15rem}
+.gia .note{margin:.2rem 0 0}
+.gia .live{font-size:.95rem;margin:.1rem 0 .5rem;color:var(--text)}
+.gia .live b{color:var(--accent)}
+.note{font-size:.88rem;color:var(--muted)}
+
+/* leaks */
+.leakcard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:1.2rem 1.1rem 1.1rem;margin-top:1.3rem;box-shadow:0 1px 2px rgba(10,20,60,.04),0 10px 28px rgba(10,20,60,.06)}
+.leak-tag{display:inline-block;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:.35rem}
+.leakcard h3{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.01em;font-size:1.4rem;line-height:1.1;margin-bottom:.8rem}
+.leak-body{display:grid;grid-template-columns:40% 1fr;gap:.9rem;align-items:start}
+.leak-body p{color:var(--body);font-size:.98rem;line-height:1.55;margin:0}
+.shot{margin:0;border:3px solid #1c1e24;border-radius:14px;overflow:hidden;background:#000}
+.shot a{display:block}
+.shot img{width:100%}
+.shot figcaption{font-size:.7rem;color:var(--muted);padding:.35rem .45rem .4rem;line-height:1.3;background:var(--bg-3)}
+.fix{display:flex;gap:.6rem;align-items:flex-start;margin-top:1rem;padding:.75rem .9rem;border-radius:12px;background:var(--tint);border-left:4px solid var(--brand-primary);color:var(--text);font-size:.97rem;line-height:1.45}
+.fix::before{content:"✓";flex:none;display:grid;place-items:center;width:1.45rem;height:1.45rem;border-radius:50%;background:var(--brand-primary);color:#fff;font-weight:900;font-size:.8rem;margin-top:.05rem}
+.fix b{color:var(--accent)}
+
+/* machine steps */
+.flow{margin:1.4rem 0 0;counter-reset:f}
+.flow li{list-style:none;counter-increment:f;position:relative;padding:0 0 1.25rem 3.4rem}
+.flow li::before{content:counter(f);position:absolute;left:0;top:0;width:2.5rem;height:2.5rem;border-radius:50%;background:var(--brand-primary);color:#fff;font-family:var(--display);font-size:1.25rem;display:grid;place-items:center;box-shadow:0 6px 16px color-mix(in srgb,var(--brand-primary) 35%,transparent)}
+.flow li::after{content:"";position:absolute;left:1.2rem;top:2.7rem;bottom:.2rem;width:2px;background:linear-gradient(var(--brand-primary),var(--line))}
+.flow li:last-child::after{display:none}
+.flow li:last-child{padding-bottom:0}
+.flow b{display:block;font-size:1.08rem;line-height:1.25;margin:.25rem 0 .2rem;color:var(--text)}
+.flow span{display:block;color:var(--body);font-size:.95rem;line-height:1.5}
+.dash{display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.5rem}
+.dash i{font-style:normal;font-size:.75rem;font-weight:800;background:var(--bg-3);border:1px solid var(--line);border-radius:6px;padding:.15rem .45rem;color:var(--text)}
+.dash i.on{background:var(--brand-primary);border-color:var(--brand-primary);color:#fff}
+.own{margin-top:1.3rem;font-size:.95rem;color:var(--muted)}
+.adwrap{margin-top:2rem}
+.adwrap .mock{max-width:360px;margin:0 auto .8rem}
+.adwrap .mock-img{aspect-ratio:1/1}
+.adwrap .label{font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:0 0 .3rem}
+
+/* proof */
+#proof{background:var(--bg-2)}
+.who{display:flex;gap:.9rem;align-items:center;margin:0 0 1rem}
+.who img{width:76px;height:76px;border-radius:50%;object-fit:cover;flex:none;border:3px solid var(--brand-primary)}
+.who b{display:block;font-size:1.05rem;line-height:1.25}
+.who span{display:block;font-size:.85rem;color:var(--muted);line-height:1.35}
+#proof p{color:var(--body)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin:1.3rem 0 .5rem}
+.stats li{list-style:none;background:var(--card);border:1px solid var(--line);border-top:3px solid var(--brand-primary);border-radius:12px;padding:.8rem .5rem;text-align:center;font-size:.8rem;color:var(--muted);line-height:1.3}
+.stats li b{display:block;font-family:var(--display);font-weight:400;font-size:1.75rem;color:var(--accent);line-height:1.05;margin-bottom:.2rem}
+.src{font-size:.8rem;color:var(--muted);margin:0 0 1.2rem}
+.team{margin:1.2rem 0 0;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+.team figcaption{font-size:.78rem;color:var(--muted);padding:.45rem .65rem;background:var(--bg-3)}
+
+/* bonus */
+#bonus{padding:2.2rem 0 2.6rem}
+details.bonus{border:1px solid var(--line);border-radius:14px;background:var(--bg-2)}
+details.bonus summary{cursor:pointer;list-style:none;padding:1rem 1.1rem;font-weight:800;font-size:1.02rem;display:flex;justify-content:space-between;gap:.8rem;align-items:center}
+details.bonus summary::-webkit-details-marker{display:none}
+details.bonus summary::after{content:"+";flex:none;display:grid;place-items:center;width:1.7rem;height:1.7rem;border-radius:50%;background:var(--brand-primary);color:#fff;font-size:1.1rem;line-height:1}
+details.bonus[open] summary::after{content:"\2212"}
+details.bonus summary small{display:block;font-weight:500;color:var(--muted);font-size:.84rem;margin-top:.15rem}
+.bonus-in{padding:0 1.1rem 1.1rem}
+.bonus-in > p{font-size:.92rem;color:var(--muted)}
+.tips li{list-style:none;position:relative;padding:.55rem 0 .55rem 1.5rem;border-top:1px solid var(--line);font-size:.93rem;color:var(--body);line-height:1.5}
+.tips li::before{content:"";position:absolute;left:.15rem;top:1.05rem;width:.55rem;height:.55rem;border-radius:2px;background:var(--brand-primary)}
+code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.86em;background:var(--bg-3);border:1px solid var(--line);border-radius:6px;padding:.05rem .3rem;color:var(--text)}
+@media (min-width:640px){.hero{padding:2rem 0 3.4rem}.hero .brand{margin-bottom:16rem}.brand-logo{width:92px;height:92px}.leak-body{grid-template-columns:36% 1fr}}
+.try-open{border:0;font-family:inherit;cursor:pointer;margin:1.1rem 0 .4rem}
+.try-open[hidden]{display:none}
+</style>
+</head>
+<body>
+
+<div class="topbar dark">Prepared for The Gauntlet by Clide at <b>Ad Grappler</b>, on behalf of Reiss Bailey</div>
+
+<main id="top">
+
+<!-- 1. HERO (logo, photo and name come from the BRAND CONFIG block) -->
+<section class="hero dark">
+  <div class="read">
+    <a class="brand" href="#top"><span class="brand-logo" role="img" aria-label="The Gauntlet Fight Academy logo"></span><span class="brand-name" aria-hidden="true"></span></a>
+    <span class="for">For Neto and the team at The Gauntlet</span>
+    <h1>More trials booked at The Gauntlet, on autopilot</h1>
+    <p class="sub">Local ads that bring in enquiries, and an assistant who answers every one in seconds and books the trial while you're on the mat.</p>
+    <div class="meta-row">
+      <span>Checked live: Fri 2 Oct 2026</span>
+      <span>About 4 min read</span>
+      <span class="private">Private link · not indexed</span>
+    </div>
+  </div>
+</section>
+
+<!-- 2. NOTE FROM CLIDE -->
+<section class="letter" id="intro">
+  <div class="read">
+    <p>Hi Neto,</p>
+    <p>Reiss asked me to build this for you. His own gym, New School BJJ Brixton, has run on Meta ads with instant follow-up since day one, and he reckons The Gauntlet would suit the same setup. So rather than just tell you about it, we built you a working piece of it to try.</p>
+    <p class="sig">Clide</p>
+    <p class="sig-role">Ad Grappler, on behalf of Reiss Bailey</p>
+  </div>
+</section>
+
+<!-- 3. MEET GIA (GHL Conversation AI "Gia" in the GHL chat widget; embed script is before </body>) -->
+<section id="gia">
+  <div class="read">
+    <p class="kicker">Try it now</p>
+    <h2>Meet Gia, The Gauntlet's AI assistant</h2>
+    <div class="gia">
+      <div class="gia-head"><span class="gia-av" aria-hidden="true"></span><div><b>Gia at The Gauntlet</b><span>Online now · replies in seconds, 24/7</span></div></div>
+      <p>She's already trained on your timetable, trial classes and prices. Ask her what a nervous beginner or a parent would ask:</p>
+      <div class="asks"><span>I've never trained, is that OK?</span><span>How much is a trial?</span><span>What's on for my 9 year old?</span></div>
+      <button type="button" class="btn big try-open" hidden>Chat with Gia</button>
+      <p class="live"><b>In the live version</b> she also books the trial straight into your calendar and texts reminders.</p>
+      <p class="note">No sign-up needed. Just tap the bubble at the bottom right (or the button) and start typing. In this demo she won't book or message anyone, and if she isn't sure of something she'll say she'll check with the team rather than guess.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 4. LEAKS (max three, each mapped to the machine; claims from evidence.md rows 17 to 24) -->
+<section id="leaks">
+  <div class="read">
+    <p class="kicker">What we spotted</p>
+    <h2>Where enquiries are slipping away</h2>
+    <p class="muted">We went through your site on a phone on 2 October. Three spots stood out, and each is exactly what this setup is built for. Orange outlines are ours; tap a screenshot to enlarge it.</p>
+
+    <article class="leakcard" id="leak-1">
+      <span class="leak-tag">1 · Speed to lead</span>
+      <h3>Enquiries wait for a reply</h3>
+      <div class="leak-body">
+        <figure class="shot"><a href="assets/chat-marked.jpg" target="_blank" rel="noopener"><img src="assets/chat-marked.jpg" alt="The Gauntlet's website chat reading We'll reply as soon as we can, asking visitors to leave their details" loading="lazy" width="600" height="1060"></a><figcaption>Your website chat</figcaption></figure>
+        <p>The chat bubble on your site asks people to leave their details, then promises a reply "as soon as we can". Someone messaging at 10pm, or while every coach is on the mat, is left waiting, and in our experience the first gym that answers usually gets the trial.</p>
+      </div>
+      <p class="fix"><span><b>How the machine fixes it:</b> Gia replies within seconds, day or night, answers the question and offers a trial slot there and then.</span></p>
+    </article>
+
+    <article class="leakcard" id="leak-2">
+      <span class="leak-tag">2 · Follow-up</span>
+      <h3>No easy way to chase people who go quiet</h3>
+      <div class="leak-body">
+        <figure class="shot"><a href="assets/form.jpg" target="_blank" rel="noopener"><img src="assets/form.jpg" alt="Trial booking form with Name and Email required and Phone Number optional" loading="lazy" width="600" height="917"></a><figcaption>£10 trial booking form</figcaption></figure>
+        <p>People can book your £10 trial without leaving a phone number, and afterwards they're told to keep an eye on their inbox. So when someone gets cold feet before their first class, there's often no number for a quick, friendly text, which is usually what brings them back.</p>
+      </div>
+      <p class="fix"><span><b>How the machine fixes it:</b> every enquiry lands in one pipeline with a mobile number, and anyone who goes quiet gets friendly texts until they book or say no thanks.</span></p>
+    </article>
+
+    <article class="leakcard" id="leak-3">
+      <span class="leak-tag">3 · Friction</span>
+      <h3>Lots of taps between "I'm interested" and a booked trial</h3>
+      <div class="leak-body">
+        <figure class="shot"><a href="assets/bookonline-marked.jpg" target="_blank" rel="noopener"><img src="assets/bookonline-marked.jpg" alt="The Book Online page opening with a long welcome text; trial options start further down" loading="lazy" width="600" height="1220"></a><figcaption>Your Book Online page</figcaption></figure>
+        <p>Your Instagram bio and Google's "Book online" button both send people to Book Online, where the trials start about one and a half screens down, among 17 options. From your Instagram bio to a paid trial we counted about 8 taps, which is a lot of chances for a nervous beginner to give up.</p>
+      </div>
+      <p class="fix"><span><b>How the machine fixes it:</b> people tell Gia what they're after, and she books the right trial in the chat in a few messages.</span></p>
+    </article>
+  </div>
+</section>
+
+<!-- 5. HOW THE MACHINE WORKS -->
+<section id="machine">
+  <div class="read">
+    <p class="kicker">The machine</p>
+    <h2>How it works</h2>
+    <ol class="flow">
+      <li><b>Meta ads bring in local enquiries</b><span>Instagram and Facebook ads built around your £10 trial, shown to people who live near Ealing.</span></li>
+      <li><b>Gia replies in seconds</b><span>Every enquiry gets a text and a proper answer straight away, even at 10pm on a Sunday.</span></li>
+      <li><b>She books the trial and sends reminders</b><span>Straight into your calendar, then a text the day before and another 2 hours before, with what to bring.</span></li>
+      <li><b>Follow-up chases anyone who goes quiet</b><span>All tracked in one dashboard, so you can see exactly who needs a nudge.</span>
+        <span class="dash" aria-label="Pipeline stages"><i>New lead</i><i>Booked</i><i>Showed</i><i class="on">Joined</i></span></li>
+    </ol>
+    <p class="own">It's all built inside your own accounts, and you approve every ad and every message before anything goes live.</p>
+
+    <div class="adwrap">
+      <p class="label">The kind of ad we'd run for you</p>
+      <div class="mock" aria-hidden="true">
+        <div class="mock-h"><i></i><div><b>The Gauntlet Fight Academy</b><span>Sponsored</span></div></div>
+        <div class="mock-t">Never trained? That's exactly who our Introduction to BJJ is for.
+
+90 minutes on our quiet upstairs mat with an experienced coach. We lend you a gi and show you round. No experience or fitness level needed.
+
+£10, right by Ealing Broadway station 👇</div>
+        <div class="mock-img alt">This is what your first class looks like<small>Short video from a real Intro class</small></div>
+        <div class="mock-f"><div><span>Instant form</span><b>Try BJJ in Ealing: £10, kit lent</b></div><em>Sign up</em></div>
+      </div>
+      <p class="note">A mock-up with your own photo and your real trial offer. You've run ads before (four short bursts, the last ending 9 August); the difference here is Gia and the follow-up behind them.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 6. PROOF: REISS'S OWN GYM -->
+<section id="proof">
+  <div class="read">
+    <p class="kicker">Proof</p>
+    <h2>Built at Reiss's own gym first</h2>
+    <div class="who"><img src="assets/reiss.jpg" alt="Reiss Bailey holding his 2026 IBJJF World Masters gold medal" width="240" height="240" loading="lazy"><div><b>Reiss Bailey</b><span>Owner and head coach, New School BJJ Brixton. 2x IBJJF World Masters champion (2024 at brown belt, 2026 at black belt).</span></div></div>
+    <p>Reiss ran an ads agency before he ever opened a gym. When he opened New School BJJ Brixton he pointed the whole machine at it from day one: 120 members in year one and around 300 within three years. Same ads, same instant follow-up, still running today.</p>
+    <ul class="stats">
+      <li><b>132</b>leads</li>
+      <li><b>£6.96</b>per lead</li>
+      <li><b>£919</b>ad spend</li>
+    </ul>
+    <p class="src">Reiss's own gym's numbers: New School BJJ Brixton, "Lead Gen" campaign, last 30 days (2 Sep to 1 Oct 2026), from Meta Ads Manager. Spend rounded.</p>
+    <figure class="team"><img src="assets/brixton-team.jpg" alt="Members of New School BJJ Brixton sitting together on the mats in front of the gym's Brixton mural" width="800" height="316" loading="lazy"><figcaption>The New School BJJ Brixton team. Built on the same system.</figcaption></figure>
+  </div>
+</section>
+
+<!-- 7. SOFT CLOSE -->
+<section class="close dark" id="close">
+  <div class="read">
+    <p class="kicker">If you fancy it</p>
+    <h2>Want this running for The Gauntlet?</h2>
+    <p>Reiss can walk you through how it would work for you in 15 minutes: the ads, Gia, and what happens after someone enquires.</p>
+    <a class="btn" href="https://api.leadconnectorhq.com/widget/booking/fjeXd5iIsFhJTOsn1srZ" target="_blank" rel="noopener">Pick a time with Reiss</a>
+    <p class="small muted">Either way, this page and Gia's demo are yours to keep. Have a play with her and show the team. Good luck with the interclub and the comp season.</p>
+    <p class="sig">Clide</p>
+    <p class="sig-role">Ad Grappler, on behalf of Reiss Bailey</p>
+  </div>
+</section>
+
+<!-- 8. BONUS: DIY TIPS (free tips, not part of the offer) -->
+<section id="bonus">
+  <div class="read">
+    <details class="bonus">
+      <summary><span>Bonus: quick fixes you can do yourself<small>Free tips from our check, mostly small jobs in Wix</small></span></summary>
+      <div class="bonus-in">
+        <p>Things we noticed along the way. These aren't part of what we'd do for you; they're just quick wins for whoever looks after your Wix site.</p>
+        <ul class="tips">
+          <li><b>Contact page:</b> "Contact" in your menu opens the Wix template (sample text, a tappable 123-456-7890, info@mysite.com, Wix's own social links). Your real details are already in the footer, so copy them up.</li>
+          <li><b>Two contact links:</b> the phone menu has "Contact" and "Contact Us", and "Contact Us" goes to the homepage. Delete one.</li>
+          <li><b>Kids pop-up:</b> the 5 to 7s waiting-list pop-up fills the Kids page about 3 seconds in, for every parent. Open it from the 5 to 7 card instead.</li>
+          <li><b>Kids "Book A Trial":</b> the button on the 5 to 8 card goes to that template Contact page.</li>
+          <li><b>Kids trials:</b> the 5 to 7 and Peewee trials show no availability for 6 months, and the 5 to 7 one says "A free trial" but costs £7. Hide them or add dates.</li>
+          <li><b>8 to 14 trials:</b> bookable on Tuesdays at 16:15 only (first open slot we found: 13 Oct), while the timetable lists 8 to 14 BJJ Mon, Wed and Fri at 17:00.</li>
+          <li><b>Age bands and dates:</b> ages differ between the Kids page, timetable and booking page, and the Peewee text still mentions a term "starting in be MAY 2026".</li>
+          <li><b>Your best page is hidden:</b> <code>/trybjj</code> is excellent but isn't in the menu. Add it, and make it the first link in your Instagram bio.</li>
+          <li><b>Phone number:</b> make it required on the booking form, and switch on Wix's SMS confirmation and reminder in Booking Settings.</li>
+          <li><b>Speed:</b> our Lighthouse tests scored the homepage 41 to 51 out of 100 on mobile. Cutting the homepage slideshow to one compressed image would help most.</li>
+          <li><b>Old offer in an ad:</b> your July ad still said "book before the end of June and get 241". Worth updating before it runs again.</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+</section>
+</main>
+
+<footer class="foot dark">
+  <div class="read">
+    <a class="brand" href="#top"><span class="brand-logo" role="img" aria-label="The Gauntlet Fight Academy logo"></span><span class="brand-name" aria-hidden="true"></span></a>
+    <p>Everything about your site was checked live on Friday 2 October 2026 from a phone-sized browser in London, without logging in to anything. Sites change, so some of this may already be fixed.</p>
+    <p class="credit">Prepared for The Gauntlet by Clide at Ad Grappler, on behalf of Reiss Bailey.</p>
+    <p>Not affiliated with Wix, Meta or Google. Logo and photos of The Gauntlet are your own, from your public website. This page is private and set to noindex.</p>
+  </div>
+</footer>
+<script>
+/* "Chat with Gia" button: shown only once the GHL widget has loaded, then opens it.
+   Also hides GHL's "Hi there! Have a question?" pop-up on phones (it sits over the text and can't be switched off in GHL).
+   The widget uses an open shadow root, so we add one style rule inside it; if GHL changes its markup this does nothing. */
+(function(){var b=document.querySelector('.try-open'),n=0;
+function cw(){return window.leadConnector&&window.leadConnector.chatWidget;}
+function hidePrompt(){var h=document.querySelector('chat-widget'),r=h&&h.shadowRoot;if(!r||r.getElementById('ag-hide-prompt'))return;
+var st=document.createElement('style');st.id='ag-hide-prompt';st.textContent='@media (max-width:640px){.lc_text-widget--prompt{display:none!important}}';r.appendChild(st);}
+var t=setInterval(function(){var w=cw();hidePrompt();if(w&&w.isLoaded===true&&typeof w.openWidget==='function'){if(b)b.hidden=false;hidePrompt();setTimeout(hidePrompt,3000);clearInterval(t);}else if(++n>60){clearInterval(t);}},500);
+if(!b)return;
+b.addEventListener('click',function(){var w=cw();if(w&&typeof w.openWidget==='function')w.openWidget();});})();
+</script>
+<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6abfe583b9d1919abad96f6c"></script>
+</body>
+</html>
